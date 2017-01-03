@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<style type="text/css" src="./js/global.js"></style>
+</head>
+<body>
+ <div id="main">
+     <!-- 阴影 zanshi1-->
+     <div class="shadow">
+         <ul>
+             <li>外部阴影 box-shadow:5px 5px rgba(255,233,211,0)</li>
+             <li class="outset">外部阴阴 模糊 box-shadow：5px 5px 5px rgba（255,233,221,0）</li>
+             <li class="outset-extension">外部阴影模糊延伸</li>
+             <li>内部阴影 box-shadow: 5px 5px 5px rgba(233,200,100)</li>
+         </ul>
+     </div>
+
+     <!-- 布局-->
+     <div class="layout">
+           <div class="visibility">我显示了</div>
+           <div class="clip">我裁剪点玩玩</div>
+           <div class="overflow">visible： 不剪切内容。
+             hidden： 将超出对象尺寸的内容进行裁剪，将不出现滚动条。
+             scroll： 将超出对象尺寸的内容进行裁剪，并以滚动条的方式显示超出的内容。
+             auto： 在需要时剪切内容并添加滚动条，此为body对象和textarea的默认值。 说明：
+             检索或设置当对象的内容超过其指定高度及宽度时如何管理内容。参阅overflow-x、overflow-y属性
+             对于table来说，假如table-layout属性设置为fixed，则td对象支持带有默认值为hidden的overflow属性。如果设为hidden，scroll或者auto，那么超出td尺寸的内容将被剪切。如果设为visible，将导致额外的文本溢出到右边或左边（视direction属性设置而定）的单元格。
+           </div>
+           <div class="box-align">
+               <div>1</div>
+               <div>2</div>
+               <div>3</div>
+           </div>
+     </div>
+
+
+
+ </div>
+
+     <style>
+         .test{position:absolute;height:50px;line-height:50px;clip:rect(0 auto 35px 10px);background:#eee;}
+     </style>
+
+ <style>
+     h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
+     .box,.box2{display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;margin:0;padding:10px;background:#000;list-style:none;}
+     .box{-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;-ms-box-orient:horizontal;box-orient:horizontal;width:260px;height:100px;}
+     .box2{-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;width:100px;height:260px;}
+     #box,#box6{-webkit-box-align:start;-moz-box-align:start;-o-box-align:start;-ms-box-align:start;box-align:start;}
+     #box2,#box7{-webkit-box-align:center;-moz-box-align:center;-o-box-align:center;-ms-box-align:center;box-align:center;}
+     #box3,#box8{-webkit-box-align:end;-moz-box-align:end;-o-box-align:end;-ms-box-align:end;box-align:end;}
+     #box4,#box9{-webkit-box-align:baseline;-moz-box-align:baseline;-o-box-align:baseline;-ms-box-align:baseline;box-align:baseline;}
+     #box5,#box10{-webkit-box-align:stretch;-moz-box-align:stretch;-o-box-align:stretch;-ms-box-align:stretch;box-align:stretch;}
+     .box li,.box2 li{padding:10px;}
+     .box li:nth-child(1),.box2 li:nth-child(1){background:#666;}
+     .box li:nth-child(2),.box2 li:nth-child(2){background:#999;}
+     .box li:nth-child(3),.box2 li:nth-child(3){background:#ccc;}
+ </style>
+ </head>
+ <body>
+ <h1>横向排列时子元素从起始位置对齐 box-align:start;</h1>
+ <ul id="box" class="box">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>横向排列时子元素居中对齐 box-align:center;</h1>
+ <ul id="box2" class="box">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>横向排列时子元素从结束位置对齐 box-align:end;</h1>
+ <ul id="box3" class="box">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>横向排列时子元素基线对齐 box-align:baseline;</h1>
+ <ul id="box4" class="box">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>横向排列时子元素自适应父元素 box-align:stretch;</h1>
+ <ul id="box5" class="box">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>纵向排列时子元素从起始位置对齐 box-align:start;</h1>
+ <ul id="box" class="box2">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>纵向排列时子元素居中对齐 box-align:center;</h1>
+ <ul id="box2" class="box2">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>纵向排列时子元素从结束位置对齐 box-align:end;</h1>
+ <ul id="box3" class="box2">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>纵向排列时子元素基线对齐 box-align:baseline;</h1>
+ <ul id="box4" class="box2">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+ <h1>纵向排列时子元素自适应父元素 box-align:stretch;</h1>
+ <ul id="box5" class="box2">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+ </ul>
+
+ <div class="test">看看被剪切后的效果</div>
+
+
+
+
+</body>
+</html>

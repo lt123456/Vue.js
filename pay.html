@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pay支付界面</title>
+    <link rel="stylesheet" href="./css/gobal.css"/>
+    <link rel="stylesheet" href="./css/pay.css"/>
+    <script src="./js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+   <header id="header">
+        <div class="topbar">
+            <div class="topbar-warp">
+                <span class="welcome">
+                     你好，欢迎使用微信支付!
+                 </span>
+                <i class="line"></i>
+                <a href="" class="contact">联系客服</a>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+        <div class="nav">
+            <div class="wechat-logo">
+            </div>
+            <div class="logo-title">
+                我的收银台
+            </div>
+        </div>
+   </header>
+
+    <section id="content" class="clearfix">
+        <div class="main">
+            <div class="order-desc">
+                <div class="order-explain">
+                    <span class="tiggger-area">请您尽快付款，以便订单及时处理！</span>
+                </div>
+                <div class="order-info">
+                    <span class="first">订单号: <span id="order-number">5808161226000336</span></span>
+                    <span class="second">订单时间: <span id="order-time">5808161226000336</span></span>
+                    <span class="three"> <span id="order-money">1</span>元</span>
+                </div>
+            </div>
+
+            <div class="view-qrcode">
+                <div class="qrcode-header">
+                     <div class="qr-sao">扫一扫付款(元)</div>
+                     <div class="qr-header_money">1.00</div>
+                </div>
+                <div class="qr-image-wrapper">
+                        <div class="qr-image-area">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="qr-image-explain">
+                            <img src="./images/qrcode.png" alt="" width="168px" height="168px"/>
+                            <div  class="qrcode-window" >
+                                <img src="./images/T1bdtfXfdiXXXXXXXX.png" alt="" class=""/>
+                                <span class="open-wechat">打开手机微信</span>
+                                <span class="scan-code">扫一扫继续付款</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="qrguide-area">
+                <img class="img1" src="./images/T13CpgXf8mXXXXXXXX_Weixin.png" alt="" onclick="imgMove(1,2)"/>
+                <img  class="img2" src="./images/T1ASFgXdtnXXXXXXXX.png" alt="" onclick="imgMove(2,1)"/>
+            </div>
+
+            <div class=""></div>
+        </div>
+    </section>
+    <footer id="footer">
+
+    </footer>
+   <script>
+
+       function imgMove(i,s) {
+           $('.img'+i).css('display','none');
+           $('.img'+s).css('display','block');
+
+       }
+   </script>
+</body>
+</html>

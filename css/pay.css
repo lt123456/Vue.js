@@ -1,0 +1,183 @@
+body{
+    min-width: 1366px;
+}
+
+#header{
+    width:100%;
+
+    color:#fff;
+    font-size: 15px;
+    line-height: 30px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+}
+.topbar-warp,.nav,.main{
+    width:60%;
+    margin:0 auto;
+}
+
+.topbar{
+    height:30px;
+    background-color: #81868b;
+}
+.topbar .welcome{
+    display:block;
+    width:75%;
+    float:left;
+    text-align: right;
+}
+.topbar .line{
+    display: block;
+    text-align: center;
+    border:none;
+    width:3px;
+    height:20px;
+    background-color:#92989E;
+    float: left;
+    top:5px;
+    margin-top: 5px;
+    margin-left:1%;
+
+}
+.topbar .contact{
+    color:#fff;
+    display: block;
+    width:22%;
+    float:right;
+}
+.nav{
+    background-color:#fff;
+    height:60px;
+}
+.nav .wechat-logo{
+    height: 40px;
+    width:140px;
+    float: left;
+    background: url(../images/wx.jpg) no-repeat;
+    margin-top: 10px;
+}
+.nav .logo-title{
+    width: 10%;
+    height: 40px;
+    float:left;
+    border-left:1px solid #676d70;
+    font-size: 16px;
+    font-family: Microsoft YaHei, serif;
+    margin-top: 13px;
+    marign-left:10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    color:#676d70;
+}
+#content{
+    background-color:#EFF0f1;
+    width: 100%;
+}
+.main{
+    padding-top: 60px;
+}
+.main .order-desc{
+    padding-left: 3%;
+    margin-bottom:20px;
+}
+.main .order-desc .order-explain{
+    font-size:16px;
+    font-weight:bold;
+
+}
+.main .order-desc .order-info{
+    padding-top:15px;
+    font-size: 14px;
+}
+.main .order-desc .order-info .first{
+    font-weight:700;
+}
+.main .order-desc .order-info .second {
+   margin-left: 20px;
+}
+.main .order-desc .order-info .three{
+    position:absolute;
+    right:25%;
+    top:14%;
+}
+.main .order-desc .order-info .three #order-money{
+    color:#f60;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 900;
+}
+.main .view-qrcode{
+    width:94%;
+    height:600px;
+    background-color:#fff;
+    margin-left: 3%;
+    border-top:5px solid #b3b3b3;
+    border-bottom:5px solid #b3b3b3;
+    text-align: center;
+    font-size:14px;
+}
+.main .view-qrcode .qrcode-header{
+    margin-top:80px;
+    height:15%;
+}
+.main .view-qrcode .qrcode-header .qr-sao{
+    height:24px;
+    line-height: 24px;
+    text-align: center;
+}
+.main .view-qrcode .qrcode-header .qr-header_money{
+    color:#f60;
+    font-weight: 900;
+    font-size:26px;
+    height:26px;
+    line-height: 26px;
+    text-align: center;
+}
+.main .view-qrcode .qr-image-wrapper{
+    width:180px;
+    height:auto;
+    min-height:180px;
+    border:1px solid #d3d3d3;
+    margin: 0 auto;
+    box-shadow: 1px 1px 1px  #ccc;
+    padding:2px 2px;
+}
+
+.main .view-qrcode .qr-image-explain .qrcode-window {
+    height:45px;
+    padding-left:10px;
+}
+.main .view-qrcode .qr-image-explain .qrcode-window img{
+    padding-top:10px;
+    padding-left: 3px;
+    float:left;
+}
+
+.main .view-qrcode .qr-image-explain .qrcode-window .open-wechat,.main .view-qrcode .qr-image-explain .qrcode-window .scan-code{
+    height:20px;
+    float:left;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 20px;
+}
+.main .qrguide-area{
+    width:205px;
+    position:absolute;
+    right:700px;
+    top:340px;
+}
+.main .qrguide-area .img2{
+    display: none;
+}
+#footer {
+    background-color:#EFF0f1;
+    height:80px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+a,input{-webkit-tap-highlight-color:transparent}
+#header p,#header ul li a{color:#fff; display: block; width: inherit; height: inherit;}
+*{margin:0;padding:0;box-sizing:border-box}
+a{text-decoration:none;color:#333}
+a:active{color:#000}
+img{border:none}
+dd,dl,dt,li,ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-style:none}
+html{font-size:100px}
+body,html{width:100%;font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif}
+body{min-width: 1366px;font-size:18px;}
+a:active,a:hover{outline:0}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+.hide{display:none}
+.block{display:block}
+.clear{clear:both}
+input::-ms-clear{display:none}
+input::-ms-reveal{display:none}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{zoom:1;display:block}

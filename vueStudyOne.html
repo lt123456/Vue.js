@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue 学习</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{user.message}}
+        <span>{{user.name}}</span>
+    </div>
+   <div id="app2">
+       <span v-bind:title="message">
+           我行我素
+       </span>
+   </div>
+    <div id="app3">
+        <span v-if="see">看得见</span>
+    </div>
+    <div id="app4">
+        <ul>
+            <li v-for="lang in languages">
+                {{ lang.text }}
+                {{ lang.money}}
+            </li>
+        </ul>
+    </div>
+    <div id="app5">
+        <p>{{ message}}</p>
+        <button v-on:click="reverseMessage"> ReverseMessage</button>
+    </div>
+   <div id="app6">
+       <p>{{ message}}</p>
+       <input type="text" v-model="message"/>
+       <ol>
+           <todo-item></todo-item>
+       </ol>
+   </div>
+
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el:'#app',
+        data:{
+            user:
+            {
+                message:' hello js!',
+                name: 'bob'
+            }
+        }
+    })
+    var app = new Vue({
+        el:'#app2',
+        data:{
+            message: 'fisr-name'+new Date()
+        }
+    })
+    var app = new Vue({
+        el:'#app3',
+        data:{
+            see:true
+        }
+    })
+    var app = new Vue({
+        el:"#app4",
+        data:{
+            languages:[
+                {text: 'chinese',money:'1'},
+                {text: 'english',money:'2'},
+                {text: 'japan',money:'3'}
+            ]
+        }
+    })
+    var app = new Vue({
+        el:'#app5',
+        data:{
+            message: 'laravel and vue!'
+        },
+        methods:{
+            reverseMessage: function(){
+                this.message = this.message.split('').reverse().join('')
+            }
+        }
+    })
+    var app = new Vue({
+        el:'#app6',
+        data: {
+            message: 'Hello world!'
+        }
+    })
+
+    Vue.component('todo-item', {
+        template:'<li>to do somethings</li>'
+    })
+
+</script>
+</html>

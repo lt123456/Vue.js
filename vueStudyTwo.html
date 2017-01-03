@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue study Two</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app6">
+        {{message}}
+        <ol>
+            <todo-item></todo-item>
+        </ol>
+    </div>
+    <div id="app7">
+        <ol>
+            <todo-itemist v-for="fruit in fruits" v-bind:todo="fruit"></todo-itemist>
+        </ol>
+    </div>
+<script>
+
+
+
+    Vue.component('todo-item', {
+        template : '<div>我草你大爷的,坑爹啊</div>'
+    });
+    Vue.component('todo-itemist',{
+        props:['todo'],
+        template:'<div>{{todo}}</div>'
+    })
+    var app = new Vue({
+        el:'#app6',
+        data: {
+            message: 'Hello world!'
+        }
+    })
+    var app = new Vue({
+        el:'#app7',
+        data:{
+            fruits:['apple','banane','watermelon'],
+        }
+    })
+
+</script>
+</body>
+</html>

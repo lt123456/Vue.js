@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js模板语法</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+         <span> {{ message}}</span>
+        <!-- v-once 初始化的只， 不会随着对象的变化 而变换了-->
+        <span  v-once>{{ message}}</span>
+        <!-- html 文本话-->
+        <span v-html="rawhtml"></span>
+        <!-- v-bind -->
+        <span v-bind:title="theme"></span>
+        <button v-bind:disabled="buttonControl">你好</button>
+        <!-- javascript 表达式-->
+        <span>{{ number + 1}}</span>
+        <span>{{ number ? number :　'zone'}}</span>
+        <span v-bind:money="'number'+number"></span>
+        <!-- 指令 v- -->
+        <span v-if="see">v-if true显示 ,false 隐藏</span>
+        <span v-bind:title="directTitle"></span>
+        <!-- 缩写 v-bind = ：-->
+        <span :title="directTitle"></span>
+        <span v-on:click="dosomething">搞定点事情</span>
+        <!-- 缩写 @  = v-on -->
+        <span @click="dosomething">缩写我是</span>
+        <!-- 修饰符-->
+        <form action="" v-on:submit.prevent="onSubmit"></form>
+        <!-- g过滤器-->
+        <span>{{ message | capitalize}}</span>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                message: '123',
+                rawhtml: '<span color="red">2222</span>',
+                theme: 'hello',
+                buttonControl: false,
+                number : 12,
+                see:false,
+                directTitle: 'direct'
+            },
+            methods:{
+                dosomething: function () {
+                    alert('ok')
+                }
+            },
+            filters:{
+                capitalize:function(value){
+                    if(value<2) return 'lt 0'
+
+                    return value
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
