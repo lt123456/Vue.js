@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> vue.js class 和 style 的绑定</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <style>
+        .active{
+            color: red;
+            width:200px;
+            height:100px;
+            background-color: cadetblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+        }
+        .text-danger{
+            box-shadow: 5px 5px 3px red;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+
+        <!-- class    isActive , hasError 发生变换的时候 会随着变换 -->
+        <div :class="{active:isActive}"> 单个class</div>
+        <div :class="{'active':isActive,'text-danger':hasError}"> 多个 class</div>
+
+        <!-- 绑定一个数据对象-->
+        <div v-bind:class="classObject">绑定一个数据对象</div>
+
+        <!--返回对象的计算属性-->
+        <div v-bind:class="classCompute">
+            compute 计算属性
+        </div>
+
+        <!-- 数组语法-->
+        <div v-bind:class="[activeClass,errorClass]">
+            数组语法[]
+        </div>
+        <!--  ？ ： -->
+        <div v-bind:class="[ isActive ? activeClass : '',errorClass]">
+            数组中使用三元运算符
+        </div>
+        <!-- [{}.]-->
+        <div v-bind:class="[{active:isActive},errorClass]">
+            数组中 使用对象域名
+        </div>
+
+        <!-- 组建 上绑定样式-->
+        <my-component class="baz boo foo"></my-component>
+        <my-component v-bind:class="{active:isActive}"></my-component>
+        <!-- -->
+
+        <!--绑定 内栏样式-->
+        <div v-bind:style="{ color:activeColor,fontSize: fontSize+'px'}">v-bind:style</div>
+        <!-- 样式对象-->
+        <div v-bind:style="styleObject">v-bind:style</div>
+    </div>
+
+    <script  type="text/javascript">
+
+        // 用到组建
+
+        Vue.component('my-component',{
+            'template': '<p class="foo bar"></p>'
+        })
+
+        // class  和 style 的 绑定
+        var vm = new Vue({
+            el:'#main',
+            data:{
+                isActive:true,
+                hasError:false,
+                classObject:{
+                    active:true,
+                    'text-danger':true
+                },
+                activeClass : 'active',
+                errorClass :  'text-danger',
+
+
+                activeColor: 'red',
+                fontSize : '100',
+                styleObject: {
+                    color :'red',
+                    fontSize:'100px'
+                }
+
+
+            },
+            computed:{
+                classCompute: function(){
+                    return {
+                        active: this.isActive && !this.hasError,
+                        'text-danger': this.hasError && this.error.type ==='fatal'
+                    }
+                }
+            }
+        })
+
+        var vm = new Vue({
+            el:'#main',
+            data:{
+                activeColor: 'red'
+//                fontSize:'20'
+            }
+        })
+    </script>
+
+</body>
+</html>

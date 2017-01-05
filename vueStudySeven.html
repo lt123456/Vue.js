@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js 条件渲染</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="main">
+        <!-- 判断 是否存在  v-if="属性" v-else-->
+        <h1 v-if="ok"> yes</h1>
+        <h1 v-else>NO</h1>
+        <!--  v-if -->
+        <template v-if="ok">
+            <h1>test</h1>
+            <p>comonent</p>
+            <p>Vue</p>
+        </template>
+
+    </div>
+    <script type="text/javascript">
+
+        var Vm = new Vue({
+            el:'#main',
+            data:{
+                ok:true
+            }
+        })
+    </script>
+</body>
+</html>

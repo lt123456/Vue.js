@@ -13,7 +13,7 @@
         <!-- html 文本话-->
         <span v-html="rawhtml"></span>
         <!-- v-bind -->
-        <span v-bind:title="theme"></span>
+        <span v-bind:title="theme">{{ theme}}</span>
         <button v-bind:disabled="buttonControl">你好</button>
         <!-- javascript 表达式-->
         <span>{{ number + 1}}</span>
@@ -37,7 +37,7 @@
             el:'#app',
             data:{
                 message: '123',
-                rawhtml: '<span color="red">2222</span>',
+                rawhtml: '<span color="red">22212</span>',
                 theme: 'hello',
                 buttonControl: false,
                 number : 12,
@@ -52,7 +52,6 @@
             filters:{
                 capitalize:function(value){
                     if(value<2) return 'lt 0'
-
                     return value
                 }
             }
